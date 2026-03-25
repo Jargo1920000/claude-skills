@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **comprehensive skills library** for Claude AI and Claude Code - reusable, production-ready skill packages that bundle domain expertise, best practices, analysis tools, and strategic frameworks. The repository provides modular skills that teams can download and use directly in their workflows.
 
-**Current Scope:** 134 production-ready skills across 9 domains with 185+ Python automation tools and 250+ reference guides.
+**Current Scope:** 169 production-ready skills across 9 domains with 160+ Python automation tools and 200+ reference guides.
 
 **Key Distinction**: This is NOT a traditional application. It's a library of skill packages meant to be extracted and deployed by users into their own Claude workflows.
 
@@ -17,11 +17,11 @@ This repository uses **modular documentation**. For domain-specific guidance, se
 | Domain | CLAUDE.md Location | Focus |
 |--------|-------------------|-------|
 | **Agent Development** | [agents/CLAUDE.md](agents/CLAUDE.md) | cs-* agent creation, YAML frontmatter, relative paths |
-| **Marketing Skills** | [marketing-skill/CLAUDE.md](marketing-skill/CLAUDE.md) | Content creation, SEO, ASO, demand gen, campaign analytics |
+| **Marketing Skills** | [marketing-skill/CLAUDE.md](marketing-skill/CLAUDE.md) | 42 skills: content, SEO, CRO, paid ads, growth, strategy, intelligence |
 | **Product Team** | [product-team/CLAUDE.md](product-team/CLAUDE.md) | RICE, OKRs, user stories, UX research, SaaS scaffolding |
 | **Engineering (Core)** | [engineering-team/CLAUDE.md](engineering-team/CLAUDE.md) | Fullstack, AI/ML, DevOps, security, data, QA tools |
 | **Engineering (POWERFUL)** | [engineering/](engineering/) | Agent design, RAG, MCP, CI/CD, database, observability |
-| **C-Level Advisory** | [c-level-advisor/CLAUDE.md](c-level-advisor/CLAUDE.md) | CEO/CTO strategic decision-making |
+| **C-Level Advisory** | [c-level-advisor/CLAUDE.md](c-level-advisor/CLAUDE.md) | 28 skills: 10 C-suite roles, orchestration, cross-cutting, culture |
 | **Project Management** | [project-management/CLAUDE.md](project-management/CLAUDE.md) | Atlassian MCP, Jira/Confluence integration |
 | **RA/QM Compliance** | [ra-qm-team/CLAUDE.md](ra-qm-team/CLAUDE.md) | ISO 13485, MDR, FDA, GDPR, ISO 27001 compliance |
 | **Business & Growth** | [business-growth/CLAUDE.md](business-growth/CLAUDE.md) | Customer success, sales engineering, revenue operations |
@@ -35,19 +35,25 @@ This repository uses **modular documentation**. For domain-specific guidance, se
 
 ```
 claude-code-skills/
-├── .claude-plugin/            # Plugin registry (marketplace.json)
-├── agents/                    # cs-* prefixed agents (in development)
-├── marketing-skill/           # 7 marketing skills + Python tools
+├── .claude/                   # Claude Code plugin commands
+├── .claude-plugin/            # Plugin registry (marketplace.json v2.1.0)
+├── .codex/                    # OpenAI Codex integration
+├── .github/                   # GitHub Actions workflows & issue templates
+├── agents/                    # cs-* prefixed agents (5 production agents)
+├── marketing-skill/           # 42 marketing skills + Python tools
 ├── product-team/              # 8 product skills + Python tools
-├── engineering-team/          # 22 core engineering skills + Python tools
-├── engineering/               # 25 POWERFUL-tier advanced skills (v2.0.0)
-├── c-level-advisor/           # 2 C-level skills
+├── engineering-team/          # 23 core engineering skills + Python tools
+├── engineering/               # 25 POWERFUL-tier advanced skills (v2.1.0)
+├── c-level-advisor/           # 28 C-level advisory skills
 ├── project-management/        # 6 PM skills + Atlassian MCP + packaged-skills
 ├── ra-qm-team/                # 12 RA/QM compliance skills
 ├── business-growth/           # 4 business & growth skills + Python tools
 ├── finance/                   # 1 finance skill + Python tools
 ├── standards/                 # 5 standards library files
 ├── templates/                 # Reusable templates
+├── commands/                  # CLI commands
+├── docs/                      # MkDocs documentation site source
+├── scripts/                   # Repository-level automation scripts
 └── documentation/             # Implementation plans, sprints, delivery
 ```
 
@@ -120,9 +126,18 @@ See [standards/git/git-workflow-standards.md](standards/git/git-workflow-standar
 
 ## Current Version
 
-**Version:** v2.0.0 (released 2026-02-16)
+**Version:** v2.1.0 (updated 2026-03-25)
 
-**v2.0.0 Highlights:**
+**v2.1.0 Highlights:**
+- 169 total skills across 9 domains (up from 134 in v2.0.0)
+- Marketing expanded from 7 → 42 skills (full specialist pods)
+- C-Level Advisory expanded from 2 → 28 skills (10 C-suite roles + orchestration + cross-cutting + culture)
+- Engineering Core expanded to 23 skills
+- MkDocs documentation site (docs/ folder)
+- robots.txt with sitemap, GA gtag.js analytics integration
+- 5 production cs-* agents (marketing, product, c-level)
+
+**v2.0.0 Highlights (2026-02-16):**
 - 25 POWERFUL-tier engineering skills added (engineering/ folder)
 - Plugin marketplace infrastructure (.claude-plugin/marketplace.json)
 - VirusTotal security scanning for skills (CI)
@@ -133,8 +148,8 @@ See [standards/git/git-workflow-standards.md](standards/git/git-workflow-standar
 
 ## Roadmap
 
-**Phase 1-2 Complete:** 134 production-ready skills deployed across 9 domains
-- Marketing (7), C-Level (33), Product (8), PM (6), Engineering Core (23), Engineering Advanced (14), RA/QM (12), Business & Growth (4), Finance (1)
+**Phase 1-2 Complete:** 169 production-ready skills deployed across 9 domains
+- Marketing (42), C-Level (28), Product (8), PM (6+packaged), Engineering Core (23), Engineering POWERFUL (25), RA/QM (12), Business & Growth (4), Finance (1)
 - 160+ Python automation tools, 200+ reference guides
 - Complete enterprise coverage from marketing through regulatory compliance, sales, customer success, and finance
 
@@ -180,6 +195,6 @@ See domain-specific roadmaps in each skill folder's README.md or roadmap files.
 
 ---
 
-**Last Updated:** March 2026
-**Version:** v2.0.0
-**Status:** 134 skills deployed across 9 domains, plugin marketplace active
+**Last Updated:** March 25, 2026
+**Version:** v2.1.0
+**Status:** 169 skills deployed across 9 domains, plugin marketplace active, MkDocs site live
